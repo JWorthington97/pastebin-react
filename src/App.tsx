@@ -8,7 +8,7 @@ function App() {
       {/* Chakra Stack is useful */}
       < MainContent />
      </div>
-  );
+  ); 
 }
 
 export default App;
