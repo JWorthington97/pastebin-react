@@ -13,7 +13,7 @@ function App() {
 
 export default App;
 
-// // Styles
+// // Style
 // const H1 = styled.h1`
 //   color: red
 // `
