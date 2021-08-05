@@ -11,6 +11,7 @@ function App() {
   ); 
 }
 
+// ["#fe4365","#fc9d9a","#f9cdad","#c8c8a9","#83af9b"]
 export default App;
 
 // // Style

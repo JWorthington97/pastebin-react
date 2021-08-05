@@ -13,5 +13,4 @@ export default async function getTenMostRecentPastes({ setRecents }: GetRecentPa
     const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/pastes`) 
     const body = await response.json()
     setRecents(body)
-    return
 }
