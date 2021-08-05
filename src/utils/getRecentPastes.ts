@@ -10,7 +10,7 @@ import { GetRecentPastesProps } from "./Types"
 // }
 
 export default async function getTenMostRecentPastes({ setRecents }: GetRecentPastesProps) {
-    const response = await fetch("http://localhost:4000/pastes")
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/pastes`) 
     const body = await response.json()
     setRecents(body)
     return

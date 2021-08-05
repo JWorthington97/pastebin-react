@@ -18,7 +18,7 @@ export default function UserInputPaste({postNewPaste}: UserInputPasteProps): JSX
                 <Textarea h="580px" w="80%" onChange={(event) => setPaste(event.target.value)}/>
             </Box>
             <Flex>
-                <Button onClick={() => postNewPaste({title, paste, setSubmitResponse})}>Submit</Button>
+                <Button colorScheme="blue" onClick={() => postNewPaste({title, paste, setSubmitResponse})}>Submit</Button>
                 {submitResponse !== "" && <Text pl="4" pt="2">{submitResponse}</Text>}
             </Flex>
         </Box>

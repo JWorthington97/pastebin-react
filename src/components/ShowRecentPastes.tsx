@@ -20,14 +20,14 @@ export default function ShowRecentPastes(): JSX.Element {
     return (
         <div>
             <Modal isOpen={isOpen} onClose={onClose}>
-                        <ModalContent>
-                            <ModalHeader>{chosen?.title || "No title"}</ModalHeader>
-                            <ModalCloseButton />
-                            <ModalBody>
-                                {chosen.paste}
-                            </ModalBody>
-                        </ModalContent>
-                    </Modal>
+                <ModalContent>
+                    <ModalHeader>{chosen?.title || "No title"}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        {chosen.paste}
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
             {recents.map((paste) => {
                 return <>
                     <Box textShadow="1px" m="6" onClick={() => {setChosen(paste); onOpen()}}>{paste.paste.slice(0, 50)} </Box>
