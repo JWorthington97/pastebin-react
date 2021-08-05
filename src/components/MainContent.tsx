@@ -1,4 +1,4 @@
-import { Heading, Flex, Spacer, Box, Text } from '@chakra-ui/react'
+import { Heading, Flex, Spacer, Box } from '@chakra-ui/react'
 import UserInputPaste from './UserInputPaste'
 import postNewPaste from '../utils/postNewPaste'
 import ShowRecentPastes from './ShowRecentPastes'
