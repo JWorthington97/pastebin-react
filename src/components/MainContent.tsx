@@ -1,31 +1,24 @@
-import { Heading, Flex, Spacer, Box } from '@chakra-ui/react'
-import UserInputPaste from './UserInputPaste'
-import postNewPaste from '../utils/postNewPaste'
-import ShowRecentPastes from './ShowRecentPastes'
-import { faPaste, faTrash } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
+import { Heading, Flex, Spacer, Box, Icon } from "@chakra-ui/react";
+import UserInputPaste from "./UserInputPaste";
+import postNewPaste from "../utils/postNewPaste";
+import ShowRecentPastes from "./ShowRecentPastes";
+import { FaPaste, FaTrash } from "react-icons/fa";
 
 export default function MainContent(): JSX.Element {
-    return (
-        <>  
-        <Flex pt="5" ml="25">
-                <FontAwesomeIcon icon={faPaste} size="3x" color="#56b7ab"/> 
-                {/* replace with Chakra icons */}
-                <FontAwesomeIcon icon={faTrash} size="3x" color="#56b7ab"/>
-                <Heading color="#56b7ab" ml="3">Pastebin</Heading>
-            </Flex>
-            <Box>
-            <Flex h="100%" m="25">
-                <UserInputPaste postNewPaste={postNewPaste} />
-                <Spacer />
-                <Box w="25%" >
-                    <Heading size="lg" color="#ec643b">Recent Pastes</Heading>
-                    <ShowRecentPastes />
-                </Box>
-            </Flex>
-            </Box>
-        </>
-    )
+  return (
+    <Box>
+      <Flex backgroundColor="#f7f2df" ml="4" pt="2">
+        <Icon as={FaPaste} w={10} h={10} mr="-2" color="#56b7ab" />
+        <Icon as={FaTrash} w={10} h={10} color="#56b7ab" />
+        <Heading color="#56b7ab" mb="2">Pastebin</Heading>
+      </Flex>
+      <Box>
+        <Flex direction={["column", "column", "row", "row"]}>
+          <UserInputPaste postNewPaste={postNewPaste} />
+          <Spacer/>
+          <ShowRecentPastes />
+        </Flex>
+      </Box>
+    </Box>
+  );
 }
