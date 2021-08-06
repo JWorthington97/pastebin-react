@@ -1,4 +1,4 @@
-import { GetRecentPastesProps } from "./Types"
+import { GetRecentPastesProps } from "./Types";
 
 // type SetterFunction = (pastes: Paste[]) => void
 
@@ -9,8 +9,10 @@ import { GetRecentPastesProps } from "./Types"
 //     return
 // }
 
-export default async function getTenMostRecentPastes({ setRecents }: GetRecentPastesProps) {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/pastes`) 
-    const body = await response.json()
-    setRecents(body)
+export default async function getTenMostRecentPastes({
+  setRecents,
+}: GetRecentPastesProps) {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/pastes`);
+  const body = await response.json();
+  setRecents(body);
 }
