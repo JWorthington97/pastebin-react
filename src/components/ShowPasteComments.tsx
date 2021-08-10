@@ -4,7 +4,6 @@ import moment from "moment";
 import deleteComment from "../utils/deleteComment";
 
 export default function ShowPasteComments({showComments}: IShowPasteCommentsProps): JSX.Element {
-    console.log(showComments)
     return <Box alignItems="center" mx={["0","0","0","5"]}>
         {showComments.map((comment) => {
             return <Flex key={comment.id} >
