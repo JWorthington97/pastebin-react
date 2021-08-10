@@ -22,3 +22,19 @@ export interface PostNewPasteProps {
 export interface UserInputPasteProps {
   postNewPaste(obj: PostNewPasteProps): void;
 }
+
+export interface IPasteComment {
+  id: number,
+  paste_id: number,
+  comment: string,
+  time: string
+}
+
+export interface IShowPasteCommentsProps {
+  showComments: IPasteComment[]
+}
+
+export interface IGetPasteCommentsProps {
+  paste_id: number,
+  setShowComments(showComments: IPasteComment[]): void
+}
