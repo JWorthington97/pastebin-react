@@ -7,5 +7,8 @@ export default async function addComment(body: string) {
       body: body
     })
 
+    if (response.status === 201) {
+      window.alert("Comment added")
+  }
     return response.status
   }
